@@ -4,73 +4,161 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cup Cake Store</title>
+
+
+    <!-- Bootrap CSS Bundle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <!-- Logo -->
-        <img src="logo.jpg" alt="Cup Cake Logo">
         <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg px-4">
+            <!-- Logo -->
+            <a href="" class="navbar-brand">
+                <img src="img/logo.svg" alt="Cup Cake Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-target="#mynav" data-toggle="collapse"
+                aria-expanded="false">
+                <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="navbar-nav mx-auto text-capitalize">
+                    <li class="nav-item"> <a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Store</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">About Us</a></li>
+                </ul>
 
-        <nav>
-            <div>
-                <ul>Home</ul>
-                <ul>Store</ul>
-                <ul>About</ul>
+                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                    <span class="info-icon mx-lg-3"><i class="fas fa-phone"></i></span>
+                    <p class="mb-0"> +880 11 124 324</p>
+                </div>
+
+                <div id="cart-info"
+                    class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                    <span class="cart-info__icon mr-3">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <p class="mb-0 text-capitalize">
+                        <span id="item-count">2</span>
+                        items - $
+                        <span class="item-total"> 10.99</span>
+                    </p>
+                </div>
+
             </div>
-            <div>
-                <ul>icon</ul>
-                <ul>Phone</ul>
-            </div>
-            <div>
-                <ul>icon</ul>
-                <ul>Phone</ul>
-            </div>
-            <div>Cart</div>
         </nav>
+        <!-- Hero Section -->
+        <div class="container-fluid">
+            <div class="row max-height justify-content-center align-items-center">
+                <div class="col-10 mx-auto banner text-center">
+                    <h1 class="text-capitalize">Welcome To <strong class="banner-title">Cup Cake Store</strong></h1>
+                    <a href="" class="btn banner-link text-uppercase my-2">Explore</a>
+                </div>
+            </div>
+
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <div>
-        <h2>Welcome to <span>Cup Cake Store</span></h2>
-        <button>Explore</button>
-    </div>
-
     <!-- Store -->
-    <div>
-        <h3>Our <span>Store</span></h3>
-        <div>
-            <ul>All</ul>
-            <ul>Cakes</ul>
-            <ul>Sweets</ul>
-            <ul>Cup Cakes</ul>
+    <section class="store py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize">Our <strong class="banner-title">Store</strong></h1>
+                </div>
+            </div>
+
+            <div class="row my-4">
+                <div class=" col-lg-8 mx-auto d-flex justify-content-around my-2 sortBtn flex-wrap">
+                    <a href="" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="all">All</a>
+                    <a href="" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="cakes">cakes</a>
+                    <a href="" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="cup-cakes">cup cakes</a>
+                    <a href="" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="sweets">Sweets</a>
+                    <a href="" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2"
+                        data-filter="doughnuts">doughnuts</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6">
+                    <form action="">
+                        <div class="input-group mb-3">
+
+                            <span class="input-group-text search-box" id="search-icon"><i
+                                    class="fas fa-search"></i></span>
+
+                            <input type="text" class="form-control" placeholder="item...">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="row" id="store-items">
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets"
+                        style="display: block;">
+                        <div class="card">
+                            <div class="img-container">
+                                <img src="img/sweets-1.jpeg" class="card-img-top store-img" alt="">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="store-item-name">Sweet Item</h5>
+                                    <h5 class="store-item-value">
+                                        $
+                                        <span id="store-item-price" class="font-weight-bold">5</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <span>search icon</span>
-            <input type="text">
-        </div>
-        <div class="store-item">
-            <img src="cake-img.jpg" alt="">
-            <h4>Cake Name</h4>
-            <span>$5</span>
-            <span>Cart Icon</span>
-        </div>
-    </div>
+    </section>
 
     <!-- About Us -->
-    <div>
-        <div>
-            <h3>About <span>Us</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni alias corporis adipisci voluptatem
-                eveniet non ex omnis, fugiat praesentium explicabo libero dolor, nemo atque neque, similique eum
-                reiciendis. Repellat, dicta?</p>
-            <button>Explore</button>
+    <section class="about py-5" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6 my-5">
+                    <h1>About <strong class="banner-title">Us</strong></h1>
+                    <p class="my-4 text-muted w-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+                        alias corporis adipisci voluptatem
+                        eveniet non ex omnis, fugiat praesentium explicabo libero dolor, nemo atque neque, similique eum
+                        reiciendis. Repellat, dicta?</p>
+                    <a href="" class="btn btn-outline-secondary btn-black text-uppercase ">Explore</a>
+                </div>
+                <div class="col-10 mx-auto col-md-6 align-self-center my-5">
+                    <div class="about-img__container">
+                        <img src="img/sweets-1.jpeg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="text-center m-4">
         Copyright 2023 | <a href="https://makereal.io">makereal.io</a>
     </footer>
+
+    <!-- Boostrap Js Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 </html>
